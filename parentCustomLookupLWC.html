@@ -1,0 +1,24 @@
+<!-- parent LWC component which calls child custom lookup component by passing required parameters -->
+<template>
+    <article class="slds-card" style="padding:20px"> 
+    
+    <p style="color:blueviolet;font-size:24px">Custom Reusable Lookup Demo - LWC</p>
+    
+    <!--Custom Lookup with Pre-Populate Value for Opportunity Object-->
+    <c-custom-lookup-lwc icon-name="standard:opportunity"
+                         s-object-api-name="user"
+                         label="Opportunity"
+                         onlookupupdate={lookupRecord}
+                         default-record-id='xxxxxxxxxxxxxxx' <!-- give your record id here or padd Id dynamically-->
+                         placeholder="type here..."></c-custom-lookup-lwc>
+
+   <br/>
+   <!--Custom Lookup without Pre-Populate Value for user Object-->
+    <c-custom-lookup-lwc icon-name="standard:user"
+                         s-object-api-name="user"
+                         label="My User"
+                         onlookupupdate={lookupRecord}
+                         placeholder="Search User here..."></c-custom-lookup-lwc>
+
+     </article>                    
+</template>
